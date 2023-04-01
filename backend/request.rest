@@ -1,0 +1,84 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Some service", 
+    "description": "Some description",
+    "price": 1800,
+    "image": "https://images.unsplash.com/photo-1680188592087-ea1fe90f9ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+}
+
+###
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/64276fe50b991ed83deaf55d
+
+###
+DELETE http://localhost:3000/api/services/64276fe40b991ed83deaf55b
+
+###
+PUT http://localhost:3000/api/services/64276fe50b991ed83deaf55d
+Content-Type: application/json
+
+{
+    "name": "Updated service test", 
+    "description": "Some description",
+    "price": 8100,
+    "image": "https://images.unsplash.com/photo-1680188592087-ea1fe90f9ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "My party 2",
+    "author": "Kevin Lucas",
+    "description": "A party for my friends",
+    "budget": 9800,
+    "image": "https://images.unsplash.com/photo-1680169269536-90d568e45600?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    "services": [
+        {
+            "name": "Test service 1", 
+            "description": "Some description test 1",
+            "price": 15500,
+            "image": "https://images.unsplash.com/photo-1680188592087-ea1fe90f9ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        },
+        {
+            "name": "Test service 2", 
+            "description": "Some description test 2",
+            "price": 800,
+            "image": "https://images.unsplash.com/photo-1680188592087-ea1fe90f9ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        }
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/642895f9d4c45e2f15642364
+
+###
+DELETE http://localhost:3000/api/parties/642895f9d4c45e2f15642366
+
+###
+PUT http://localhost:3000/api/parties/642896e4d4c45e2f15642365
+Content-Type: application/json
+
+{
+    "title": "My party 2",
+    "author": "Kevin Lucas",
+    "description": "A party for my friends",
+    "budget": 9800,
+    "image": "https://images.unsplash.com/photo-1680169269536-90d568e45600?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    "services": [
+        {
+            "name": "Test service 4", 
+            "description": "Some description test 1",
+            "price": 500,
+            "image": "https://images.unsplash.com/photo-1680188592087-ea1fe90f9ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        }
+    ]
+}
